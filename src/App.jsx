@@ -91,13 +91,13 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-[#050505]/95 backdrop-blur-md py-4' : 'bg-transparent py-6'}`}>
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 flex justify-between items-center">
         <a href="#home" className="text-xl font-black text-white tracking-tighter"><span className="text-accent">B</span>AGAVATH.</a>
         <div className="hidden md:flex gap-10 items-center">
           {['Home', 'About', 'Expertise', 'Projects', 'Contact'].map((item) => (
             <a key={item} href={`#${item.toLowerCase()}`} className="text-[10px] font-bold text-gray-500 hover:text-[#00D1FF] uppercase tracking-[0.2em] transition-all">{item}</a>
           ))}
-          <a href="#contact" className="bg-accent text-[#050505] px-6 py-2 rounded-lg font-black text-[10px] tracking-widest hover:bg-white transition-all shadow-lg shadow-[#00D1FF]/20">HIRE ME</a>
+          <a href="#contact" className="bg-accent text-[#050505] px-4 md:px-6 py-2 rounded-lg font-black text-[10px] tracking-widest hover:bg-white transition-all shadow-lg shadow-[#00D1FF]/20">HIRE ME</a>
         </div>
       </div>
     </nav>
@@ -113,8 +113,7 @@ const Hero = () => (
       className="z-10"
     >
       <span className="text-accent font-bold tracking-[0.4em] uppercase text-[10px] mb-6 block">Code • Data • Innovation</span>
-      <h1 className="text-[clamp(3.5rem,8vw,9rem)] leading-[1.05]  font-black text-white mb-8 pb-2 tracking-tighter max-w-full overflow-visible">
-
+      <h1 className="text-4xl md:text-7xl lg:text-8xl leading-[1.05] font-black text-white mb-8 pb-2 tracking-tighter max-w-full">
         BAGAVATH<span className="text-accent bg-clip-text bg-gradient-to-r from-[#00D1FF] to-[#00A3FF]">RAJ</span>
       </h1>
       
@@ -146,8 +145,8 @@ const Hero = () => (
 
 const About = () => (
   <section id="about" className="py-24  bg-[#080808]">
-    <div className="max-w-7xl mx-auto px-6">
-      <div className="grid lg:grid-cols-2 gap-16 items-start">
+    <div className="max-w-7xl mx-auto px-4 md:px-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -210,13 +209,12 @@ const About = () => (
 
 const Expertise = () => (
   <section id="expertise" className="py-24  bg-[#050505]">
-    <div className="max-w-7xl mx-auto px-6">
+    <div className="max-w-7xl mx-auto px-4 md:px-6">
       <div className="text-center mb-20">
         <span className="text-accent font-bold tracking-widest uppercase text-[9px] mb-4 block">Skill Stack</span>
         <h2 className="text-5xl font-black text-white tracking-tight">TECHNICAL EXPERTISE</h2>
       </div>
-
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {USER_DATA.skills.map((skill, idx) => (
           <motion.div 
             key={idx}
@@ -237,7 +235,7 @@ const Expertise = () => (
 
 const Projects = () => (
   <section id="projects" className="py-24  bg-[#080808]">
-    <div className="max-w-7xl mx-auto px-6">
+    <div className="max-w-7xl mx-auto px-4 md:px-6">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
         <div>
           <span className="text-accent font-bold tracking-widest uppercase text-[9px] mb-4 block">Case Studies</span>
@@ -247,8 +245,7 @@ const Projects = () => (
           View Repository <ExternalLink size={12} />
         </a>
       </div>
-
-      <div className="grid lg:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {USER_DATA.projects.map((project) => (
           <motion.div 
             key={project.id}
@@ -257,7 +254,7 @@ const Projects = () => (
             viewport={{ once: true }}
             className="group"
           >
-            <div className="relative h-[450px] overflow-hidden rounded-[35px] mb-8 bg-[#111] border border-white/5">
+            <div className="relative h-auto md:h-[450px] overflow-hidden rounded-[35px] mb-8 bg-[#111] border border-white/5">
               <img src={project.image} alt={project.title} className="w-full h-full object-cover opacity-40 group-hover:opacity-100 transition-all duration-700 transform group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent p-12 flex flex-col justify-end">
                 <span className="text-accent font-bold text-[9px] uppercase tracking-widest mb-4">{project.category}</span>
@@ -308,11 +305,11 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-24  bg-[#050505]">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div>
             <h2 className="text-[6vw] leading-none font-black text-white mb-10 tracking-tighter">
-              LET'S BUILD <br /><span className="text-[#00D1FF]">TOMORROW.</span>
+              LET'S BUILD <br /><span className="text-accent">TOMORROW.</span>
             </h2>
             <p className="text-gray-500 text-lg mb-16 font-medium max-w-sm">
               Available for AI/ML opportunities and full-stack development collaborations.
@@ -320,13 +317,13 @@ const Contact = () => {
 
             <div className="space-y-6">
               <a href={`mailto:${USER_DATA.email}`} className="flex items-center gap-6 group w-fit">
-                <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center text-[#00D1FF] group-hover:shadow-[0_0_20px_#00D1FF] transition-all">
+                <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center text-accent group-hover:shadow-[0_0_20px_#00D1FF] transition-all">
                   <Mail size={24} />
                 </div>
                 <span className="text-white text-xl font-black">{USER_DATA.email}</span>
               </a>
               <a href={`tel:${USER_DATA.phone}`} className="flex items-center gap-6 group w-fit">
-                <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center text-[#00D1FF] group-hover:shadow-[0_0_20px_#00D1FF] transition-all">
+                <div className="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center text-accent group-hover:shadow-[0_0_20px_#00D1FF] transition-all">
                   <Phone size={24} />
                 </div>
                 <span className="text-white text-xl font-black">{USER_DATA.phone}</span>
@@ -348,7 +345,7 @@ const Contact = () => {
   name={field === 'Email' ? 'email' : 'name'}
   value={field === 'Email' ? formData.email : formData.name}
   onChange={handleChange}
-  className="w-full bg-transparent border-b border-white/10 py-3 text-white text-lg font-bold focus:border-[#00D1FF] focus:outline-none transition-all"
+  className="w-full bg-transparent border-b border-white/10 py-3 text-white text-lg font-bold focus:border-accent focus:outline-none transition-all"
   placeholder={`Your ${field}`}
 />
 
@@ -361,12 +358,12 @@ const Contact = () => {
   name="message"
   value={formData.message}
   onChange={handleChange}
-  className="w-full bg-transparent border-b border-white/10 py-3 text-white text-lg font-bold focus:border-[#00D1FF] focus:outline-none transition-all resize-none"
+  className="w-full bg-transparent border-b border-white/10 py-3 text-white text-lg font-bold focus:border-accent focus:outline-none transition-all resize-none"
   placeholder="Tell me about your vision"
 />
 
               </div>
-              <button className="w-full bg-[#00D1FF] text-[#050505] py-5 rounded-xl font-black text-xs uppercase tracking-widest hover:bg-white transition-all shadow-xl shadow-[#00D1FF]/10">
+              <button className="w-full bg-accent text-[#050505] py-5 rounded-xl font-black text-xs uppercase tracking-widest hover:bg-white transition-all shadow-xl shadow-[#00D1FF]/10">
                 SEND
               </button>
             </div>
@@ -374,7 +371,7 @@ const Contact = () => {
         </div>
 
         <div className="mt-32 pt-16 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-          <span className="text-lg font-black text-white tracking-tighter">BAGAVATH<span className="text-[#00D1FF]">RAJ.</span></span>
+          <span className="text-lg font-black text-white tracking-tighter">BAGAVATH<span className="text-accent">RAJ.</span></span>
           <div className="flex gap-10">
             <a href={USER_DATA.socials.linkedin} className="text-gray-600 hover:text-white transition-all"><Linkedin size={20} /></a>
             <a href={USER_DATA.socials.github} className="text-gray-600 hover:text-white transition-all"><Github size={20} /></a>
@@ -388,7 +385,7 @@ const Contact = () => {
 
 export default function App() {
   return (
-    <div className="bg-[#050505] min-h-screen w-screen overflow-x-hidden text-white font-sans selection:bg-[#00D1FF] selection:text-[#050505]">
+    <div className="bg-[#050505] min-h-screen w-screen overflow-x-hidden text-white font-sans selection:bg-accent selection:text-[#050505]">
       <Navbar />
       <Hero />
       <About />
