@@ -241,8 +241,7 @@ const Projects = () => (
           <span className="text-accent font-bold tracking-widest uppercase text-[9px] mb-4 block">Case Studies</span>
           <h2 className="text-5xl font-black text-white tracking-tight">FEATURED PROJECTS</h2>
         </div>
-        <a href="#" className="text-white font-black text-[10px] uppercase tracking-[0.2em] hover:text-accent transition-all flex items-center gap-2 border-b border-white/10 pb-2">
-          View Repository <ExternalLink size={12} />
+        <a href="https://github.com/BagavathRaj/Hospital-CRM-Project" target="_blank" rel="noopener noreferrer" className="text-white font-black text-[10px] uppercase tracking-[0.2em] hover:text-accent transition-all flex items-center gap-2 border-b border-white/10 pb-2">View Repository <ExternalLink size={12} />
         </a>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
