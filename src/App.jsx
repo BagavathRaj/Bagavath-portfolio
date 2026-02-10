@@ -262,9 +262,9 @@ const Projects = () => (
                   {project.desc}
                 </p>
                 <div className="flex gap-4">
-                   <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-black group-hover:bg-accent transition-all">
+                   <a href="https://github.com/BagavathRaj/Hospital-CRM-Project" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-black group-hover:bg-accent transition-all">
                       <ExternalLink size={20} />
-                   </div>
+                   </a>
                 </div>
               </div>
             </div>
